@@ -2,3 +2,7 @@ h1 {
     color: teal;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+a {
+    font-size: large;
+    align-items: center;
+}

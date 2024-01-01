@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Kalkulator Matematika</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="Assets/Logo.png">
         <script>
             function calculateCircumference() {
               // Get the input values
@@ -53,20 +54,13 @@
         </header>
         <main class="content">
             <p class="choose-line">Choose Your Plane Figure </p>
-            <div class="selection-button">
-            <ul class="ul-selection-button">
-                <li class="li-selection-button">
-                    <a href="#cot" class="buttons" id="triangle-button">Cumference of Triangle</a>
-                </li>
-                <li class="li-selection-button">
-                    <a href="#aot" class="buttons" id="circle-button"> Area of Circle</a>
-                </li>
-                </li>
-            </ul>
+            <div class="selection-buttons">
+                <button class="buttons" onclick="location.href='#cot'">Circumference of Triangle</button>
+                <button class="buttons" onclick="location.href='#aot'">Area of Triangle</button>
             </div>
             <p class="triangle" id="cot">Circumference of Triangle</p>
              <!-- cot = Circumference of Triangle -->
-            <img src="Assets/Perimeter-of-a-Isosceles-Equilateral-and-Scalene-Triangle-1.png" alt="Circumference of Triangle Image" class="cot-img">
+            <img src="Assets/COT.png" alt="Circumference of Triangle Image" class="cot-img">
             <div class="triangle-calculation" id="cot-result">
                 <label for="sideA">Side A:</label>
                 <input type="text" id="sideA" placeholder="Enter side A">
@@ -76,12 +70,12 @@
             
                 <label for="sideC">Side C:</label>
                 <input type="text" id="sideC" placeholder="Enter side C">
-                <button onclick="calculateCircumference()">Confirm</button>
-                <button onclick="resetForm()">Reset</button>
-                <p id='result'></p>
             </div>
-                
-             
+            <div class="result-button">
+                <button class="buttons" onclick="calculateCircumference()">Confirm</button>
+                <button class="buttons" onclick="resetForm()">Reset</button>
+            </div>
+            <p id='result'></p>
 
             <p class="triangle" id="aot">Area of Triangle</p>
             <!-- aot = Area of Triangle -->

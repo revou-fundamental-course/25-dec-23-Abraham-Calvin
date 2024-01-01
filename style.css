@@ -1,0 +1,17 @@
+h1 {
+    color: teal;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+a {
+    font-size: large;
+}
+button {
+    width: 100%;
+}
+div {
+    background-color: lightgray;
+    background: url(3D-removebg-preview.png);
+    background-size: 1000%;
+    text-decoration: wavy;
+    text-emphasis: unset;
+}

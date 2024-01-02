@@ -6,70 +6,40 @@
         <title>Kalkulator Matematika</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" href="Assets/Logo.png">
-        <script>
-            function calculateCircumference() {
-              // Get the input values
-              var sideA = parseFloat(document.getElementById('sideA').value);
-              var sideB = parseFloat(document.getElementById('sideB').value);
-              var sideC = parseFloat(document.getElementById('sideC').value);
-        
-              // Check if the inputs are valid numbers
-              if (isNaN(sideA) || isNaN(sideB) || isNaN(sideC)) {
-                alert('Please enter valid numerical values for all sides.');
-                return;
-              }
-        
-              // Check if the given sides form a valid triangle
-              if (sideA + sideB > sideC && sideB + sideC > sideA && sideC + sideA > sideB) {
-                // Calculate the result
-                var area = sideA + sideB + sideC;
-                // Display the result
-                document.getElementById('result').textContent = 'The area of the triangle is: ' + area.toFixed();
-              } else {
-                alert('Invalid sides! The given sides do not form a valid triangle.');
-              }
-            }
-            function resetForm() {
-                document.getElementById('sideA').value = '';
-                document.getElementById('sideB').value = '';
-                document.getElementById('sideC').value = '';
-                document.getElementById('result').innerHTML = '';
-            }
-            document.addEventListener('DOMContentLoaded', function() {
-            var inputFields = document.querySelectorAll('input[type="text"]');
-            inputFields.forEach(function(inputField) {
-            inputField.addEventListener('keydown', function(event) {
-                if (event.key === 'Enter') {
-                    event.preventDefault();
-                    calculateCircumference();
-            }
-        });
-    });
-});
-        </script>        
+        <script type="text/javascript" src="js/script.js"></script>    
     </head>
     <body>
         <header class="navbar">
-            <h1>MATHEMATICS CALCULATOR</h1>
+            <h1>MATHEMATICS</h1>
+            <img class="logo-img" src="Assets/Logo.png" alt="Website's Logo">
+            <h1>CALCULATOR</h1>
         </header>
         <main class="content">
-            <p class="choose-line">Choose Your Plane Figure </p>
+            <p class="welcome-line" id="welcome-line1">Welcome to <br> MATHEMATICS CALCULATOR</p>
+            <p class="welcome-line" id="welcome-line2">In this website you can pick any <b>triangle calculation</b> you want, and the website will get the answers for you</p>
+            <p class="choose-line">Choose Your Calculation </p>
             <div class="selection-buttons">
                 <button class="buttons" onclick="location.href='#cot'">Circumference of Triangle</button>
                 <button class="buttons" onclick="location.href='#aot'">Area of Triangle</button>
             </div>
-            <p class="triangle" id="cot">Circumference of Triangle</p>
-             <!-- cot = Circumference of Triangle -->
-            <img src="Assets/COT.png" alt="Circumference of Triangle Image" class="cot-img">
+            <div>
+                <p class="triangle" id="cot">Circumference of Triangle</p>
+                <!-- cot = Circumference of Triangle -->
+            </div>
+            </div>
+            
+            <div class="image-container">
+                <img src="Assets/COT.png" alt="Image of the Circumference of Triangle" class="cot-img">
+            </div>
             <div class="triangle-calculation" id="cot-result">
-                <label for="sideA">Side A:</label>
-                <input type="text" id="sideA" placeholder="Enter side A">
+                <label class="input-labels" for="sideA">Side A</label>
+                <input class="inputs" type="text" id="sideA" placeholder="Enter side A">
             
-                <label for="sideB">Side B:</label>
-                <input type="text" id="sideB" placeholder="Enter side B">
+                <label class="input-labels" for="sideB">Side B</label>
+                <input class="inputs" type="text" id="sideB" placeholder="Enter side B">
             
-                <label for="sideC">Side C:</label>
-                <input type="text" id="sideC" placeholder="Enter side C">
+                <label class="input-labels" for="sideC">Side C</label>
+                <input class="inputs" type="text" id="sideC" placeholder="Enter side C">
             </div>
             <div class="result-button">
                 <button class="buttons" onclick="calculateCircumference()">Confirm</button>
@@ -80,5 +50,8 @@
             <p class="triangle" id="aot">Area of Triangle</p>
             <!-- aot = Area of Triangle -->
         </main>
+        <footer class="footer">
+            <p>&copy; 2023 Abraham Calvin Paju</p>
+        </footer>
     </body>
 </html>

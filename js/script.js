@@ -21,11 +21,11 @@ function calculateCircumference() {
         alert('Invalid sides! The given sides do not form a valid triangle.');
     }
   }
-function resetForm() {
+function resetCircumferenceForm() {
     document.getElementById('sideA').value = '';
     document.getElementById('sideB').value = '';
     document.getElementById('sideC').value = '';
-    document.getElementById('result').innerHTML = '';
+    document.getElementById('resultCircumference').innerHTML = '';
   }
   document.addEventListener('DOMContentLoaded', function() {
     var inputFields = document.querySelectorAll('input[type="text"]');
@@ -58,10 +58,10 @@ function calculateArea() {
     document.getElementById('resultArea').textContent = 'The area of the triangle is: ' + area.toFixed(2);
 }
 
-function resetForm() {
+function resetAreaForm() {
     document.getElementById('base').value = '';
     document.getElementById('height').value = '';
-    document.getElementById('result').innerHTML = '';
+    document.getElementById('resultArea').innerHTML = '';
 }
 
 document.addEventListener('DOMContentLoaded', function () {

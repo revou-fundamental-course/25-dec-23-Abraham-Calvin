@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kalkulator Matematika</title>
+        <title>Mathematics Calculator</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" href="Assets/Logo.png">
         <script type="text/javascript" src="js/script.js"></script>    
@@ -17,17 +17,15 @@
         <main class="content">
             <p class="welcome-line" id="welcome-line1">Welcome to <br> MATHEMATICS CALCULATOR</p>
             <p class="welcome-line" id="welcome-line2">In this website you can pick any <b>triangle calculation</b> you want, and the website will get the answers for you</p>
-            <p class="choose-line">Choose Your Calculation </p>
+            <p class="choose-line"> <u>Choose</u>&nbsp;<u>Your</u>&nbsp;<u>Calculation</u> </p>
             <div class="selection-buttons">
-                <button class="buttons" onclick="location.href='#cot'">Circumference of Triangle</button>
-                <button class="buttons" onclick="location.href='#aot'">Area of Triangle</button>
+                <button class="buttons" id="cot-button" onclick="location.href='#cot'">Circumference of Triangle</button>
+                <button class="buttons" id="aot-button" onclick="location.href='#aot'">Area of Triangle</button>
             </div>
             <div>
                 <p class="triangle" id="cot">Circumference of Triangle</p>
                 <!-- cot = Circumference of Triangle -->
             </div>
-            </div>
-            
             <div class="image-container">
                 <img src="Assets/COT.png" alt="Image of the Circumference of Triangle" class="cot-img">
             </div>
@@ -45,10 +43,25 @@
                 <button class="buttons" onclick="calculateCircumference()">Confirm</button>
                 <button class="buttons" onclick="resetForm()">Reset</button>
             </div>
-            <p id='result'></p>
+            <p class="result" id='resultCircumference'></p>
 
             <p class="triangle" id="aot">Area of Triangle</p>
             <!-- aot = Area of Triangle -->
+            <div class="image-container">
+                <img src="Assets/AOT.png" alt="Image of the Area of Triangle" class="aot-img">
+            </div>
+            <div class="triangle-calculation" id="aot-result">
+                <label class="input-labels" for="base">Base</label>
+                <input class="inputs" type="text" id="base" placeholder="Enter Base">
+            
+                <label class="input-labels" for="height">Height</label>
+                <input class="inputs" type="text" id="height" placeholder="Enter Height">
+            </div>
+            <div class="result-button">
+                <button class="buttons" onclick="calculateArea()">Confirm</button>
+                <button class="buttons" onclick="resetForm()">Reset</button>
+            </div>
+            <p class="result" id="resultArea"></p>
         </main>
         <footer class="footer">
             <p>&copy; 2023 Abraham Calvin Paju</p>
